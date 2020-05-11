@@ -1,0 +1,201 @@
+! version = 2.0
+
+// bot Variable 
+! var name = Effie
+! var age =  20
+! var sex = female
+! var location = Accra
+
+// Substitutions
+! sub +         = plus
+! sub -         = minus
+! sub /         = divided
+! sub *         = times
+! sub i'm       = i am
+! sub i'd       = i would
+! sub i've      = i have
+! sub i'll      = i will
+! sub don't     = do not
+! sub isn't     = is not
+! sub you'd     = you would
+! sub you're    = you are
+! sub you've    = you have
+! sub you'll    = you will
+! sub he'd      = he would
+! sub he's      = he is
+! sub he'll     = he will
+! sub she'd     = she would
+! sub she's     = she is
+! sub she'll    = she will
+! sub they'd    = they would
+! sub they're   = they are
+! sub they've   = they have
+! sub they'll   = they will
+! sub we'd      = we would
+! sub we're     = we are
+! sub we've     = we have
+! sub we'll     = we will
+! sub whats     = what is
+! sub what's    = what is
+! sub what're   = what are
+! sub what've   = what have
+! sub what'll   = what will
+! sub can't     = can not
+! sub whos      = who is
+! sub who's     = who is
+! sub who'd     = who would
+! sub who'll    = who will
+! sub don't     = do not
+! sub didn't    = did not
+! sub it's      = it is
+! sub could've  = could have
+! sub couldn't  = could not
+! sub should've = should have
+! sub shouldn't = should not
+! sub would've  = would have
+! sub wouldn't  = would not
+! sub when's    = when is
+! sub when're   = when are
+! sub when'd    = when did
+! sub y         = why
+! sub u         = you
+! sub ur        = your
+! sub r         = are
+! sub im        = i am
+! sub wat       = what
+! sub wats      = what is
+! sub ohh       = oh
+! sub becuse    = because
+! sub becasue   = because
+! sub becuase   = because
+! sub practise  = practice
+! sub its a     = it is a
+! sub fav       = favorite
+! sub fave      = favorite
+! sub iam       = i am
+! sub realy     = really
+! sub iamusing  = i am using
+! sub amleaving = am leaving
+! sub yuo       = you
+! sub youre     = you are
+! sub didnt     = did not
+! sub ain't     = is not
+! sub aint      = is not
+! sub wanna     = want to
+! sub brb       = be right back
+! sub bbl       = be back later
+! sub gtg       = got to go
+! sub g2g       = got to go
+
+// Person substitutions
+! person i am    = you are
+! person you are = I am
+! person i'm     = you're
+! person you're  = I'm
+! person my      = your
+! person your    = my
+! person you     = I
+! person i       = you
+
+
+// small talk
++ (hi|hello|howdy|sup|hi there|hello there)
+- Hi there! what is your name?
+- Hello my name is <bot name>, what is your name?
+- Hello how are you feeling today?
+
++ [*] (sick|not feeling well)
+- I'm sorry to hear that{weight=5}
+- too bad
+- What is wrong?{weight=3}
+
++ i think i have the virus
+
+- Ask me anything about the virus
+
++ [*] (fine|feeling well|doing well|good|great)
+- I'm happy to hear that
+- Good to hear that
+- We thank God
+
++ what is my name
+* <get name> == undefined => You never told me your name.
+- Your name is <get name>
+- Aren't you <get name>?
+
++ my name is *
+- <set name=<formal>>Nice to meet you, <get name>!
+
++ what is your name
+- My name is <bot name>
+
++ (how old are you|how old are you)
+- I am <bot age> years old
+  
++ [*] (live|come from)
+- I'm from <bot location>
+
+
+// COVID-19
++ (what is covid19|tell me about the virus|what is coronavirus|what is corona|i want to know about coronavirus|what is the virus)
+- Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. \n
+^ The disease causes respiratory illness (like the flu) with symptoms such as a cough, \s
+^ fever, and in more severe cases, difficulty breathing. \n
+^ You can protect yourself by washing your hands frequently, avoiding touching your face,\s
+^ and avoiding close contact (1 meter or 3 feet) with people who are unwell.
+
+
++ (how does the virus spread|how does one get the virus|how does the virus spread)
+- Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze. \n
+^ It also spreads when a person touches a surface or object that has the virus on it, \s
+^ then touches their eyes, nose, or mouth.
+
+
++ [*] (protect yourself from the virus|prevent the coronavirus|be safe)
+- You can protect yourself and prevent the spread the virus if you;
+^ <h3>Do</h3>
+^ <ol> \n
+^ <li>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</li> \n
+^ <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</li> \n
+^ <li>Avoid close contact (1 meter or 3 feet) with people who are unwell</li> \n
+^ <li>Stay home and self-isolate from others in the household if you feel unwell</li> \n \n
+^ </ol> \n
+^ <h3>Don't</h3>
+^ <ol> \n
+^ <li>Touch your eyes, nose or face</li> \n
+^ <li>Wash your hands for 2 seconds with soap or sanitizer</li> \n
+^ </ol>
+
+
+// the cure
++ [*] (treatment for the virus|cure for the virus|drug for coronavirus|cure the virus)
+ - There is currently no cure for COVID-19. There are however, many promising vaccine trials underway.
+
+
+// the test
++ [*] test [*]
+- You are most vulnerable if; \n
+^ <ol> \n
+^ <li>You are sick or care for a sick person</li> \n
+^ <li>You are above 60 years of age</li> \n
+^ <li>You have any of the following life-thretening symptoms: \n 
+^ <ul> \n
+^  <li>extreme difficulty in breathing</li> \n
+^  <li>blue-colored lips or face</li> \n
+^  <li>severe and constant pain or pressure in your chest</li> \n
+^  <li>severe and constant diziness</li> \n
+^  <li>severe fever, cough and/ or sore throat</li> \n
+  </ul>
+</li> \n
+^ </ol>
+
+
+// Get Help
++ [*] (call|get help|talk to) [*]
+- You can call this number: +233 302 665651 for help
+
+
++ *
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+- Let's change the subject.
