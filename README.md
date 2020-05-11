@@ -7,7 +7,7 @@
 
  ### Run
 
- 1. `bash 
+ 1. ` 
     git clone https://github.com/Boadzie/covid-19_bot.git
  `
  2. use *live server* to run it
