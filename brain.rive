@@ -12,7 +12,11 @@
 ! sub /         = divided
 ! sub *         = times
 ! sub covid-19  = covid19
+! sub covid 19  = covid19
+! sub preventive = prevent
+! sub thank you = thanks
 ! sub i'm       = i am
+! sub im        = i am
 ! sub i'd       = i would
 ! sub i've      = i have
 ! sub i'll      = i will
@@ -105,13 +109,22 @@
 - Hello my name is <bot name>, what is your name?
 - Hello how are you feeling today?
 
-+ [*] (sick|not feeling well)
-- I'm sorry to hear that{weight=5}
-- too bad
-- What is wrong?{weight=3}
 
-+ i think i have the virus
++ [*] (have the virus|sick|i am infected|contracted|not feeling well) [*]
+- I'm sorry to hear that. <br>
+^ If you see the symptoms do the following; <br>
+^ Stay home except to get medical care <br>
+^ Separate yourself from other people <br>
+^ Monitor your symptoms(talk to a health professional) <br>
+^ Call ahead before visiting your doctor <br>
+^ If you are sick wear a cloth covering over your nose and mouth <br>
+^ Cover your coughs and sneezes <br>
+^ Wash your hands often <br>
+^ Avoid sharing personal household items <br>
+^ Clean all “high-touch” surfaces everyday <br>
+^ How to discontinue home isolation <br>
 - Ask me anything about the virus
+
 
 + [*] (fine|feeling well|doing well|good|great)
 - I'm happy to hear that
@@ -126,7 +139,7 @@
 + [*] yes [*]
 - See! I'm smart
 
-+ my name is *
++ [*] my name is * [*]
 - <set name=<formal>>Nice to meet you, <get name>!
 
 + my name is #
@@ -149,6 +162,11 @@
 + [*] (live|come from)
 - I'm from <bot location>
 
++ [*] thanks [*]
+- Glad to help!
+- Happy to be of assistance!
+- You welcome!
+- My pleasure!
 
 // COVID-19
 + (what is covid19|tell me about the virus|what is coronavirus|what is corona|i want to know about coronavirus|what is the virus|what is covid)
@@ -185,8 +203,8 @@
 ^ then touches their eyes, nose, or mouth.
 
 
-+ [*] (protect|protect myself from the virus|prevent|be safe) [*]
-- You can protect yourself and prevent the spread the virus if you; 
++ [*] (protect|protect myself from the virus|prevent|be safe|boost my immune system) [*]
+- You can protect yourself and prevent the spread the virus if you; \n <br> 
 ^ <br> \n
 ^ <strong>Do</strong>
 ^ <ol> \n
@@ -240,7 +258,7 @@
 ^ </ul>
 
 // deaths or nots
-+ [*] (confirmed cases|death|deaths|recoveries|recover|infected|stats|numbers|many) [*]
++ [*] (confirmed cases|death|deaths|recoveries|recover|are infected|stats|numbers|many|in ghana|global) [*]
 - The following are the numbers in Ghana as of May 12, 2020; \n 
 ^ <br> \n
 ^ Confirmed cases: <strong>4,700</strong> <br>  \n
@@ -255,7 +273,7 @@
 ^ source: <a href="https://extranet.who.int/publicemergency" target="_blank">WHO Dashboard</a>
 
 // Get Help
-+ [*] (call|help|talk to|more information) [*]
++ [*] (call|get help|talk to|more information) [*]
 - You can call these numbers for help: \n
 ^ <ul> \n
 ^ <li>+233 302 665651</li> \n
@@ -275,3 +293,17 @@
 - I'm not sure how to reply to that.
 - Try asking your question in a different way.
 - I didn't get that .
+
+// nutition advice
++ [*] (nutition advice|food) [*]
+- <img src="img/covid_19_nutrition.png"> <br>
+^ <br>
+^ Eat fresh and unprocessed foods every day <br>
+^ Drink a lot of water every day <br>
+^ Eat moderate amounts of fat and oil <br>
+^ Eat less salt and sugar <br>
+^ Avoid eating out <br>
+^ source: <a target="_blank" href="https://www.emro.a.int/nutrition/nutrition-infocus/nutrition-advice-for-adults-during-the-covid-19-outbreak.html">WHO</a>
+
+
+// if sick
