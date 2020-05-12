@@ -10,4 +10,5 @@
  1. ` 
     git clone https://github.com/Boadzie/covid-19_bot.git
  `
+ 2. `cd covid-19-master`
  2. use *live server* to run it

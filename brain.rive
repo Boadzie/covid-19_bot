@@ -110,7 +110,6 @@
 - What is wrong?{weight=3}
 
 + i think i have the virus
-
 - Ask me anything about the virus
 
 + [*] (fine|feeling well|doing well|good|great)
@@ -123,62 +122,112 @@
 - Your name is <get name>
 - Aren't you <get name>?
 
++ [*] yes [*]
+- See! I'm smart
+
 + my name is *
 - <set name=<formal>>Nice to meet you, <get name>!
+
++ my name is #
+- Nobody has the name of <star>.
+- <star> isn't a real name.
+- Names don't have numbers in them, <star>.
+
++ i am from *
+- What is it like to live in <star>?
 
 + what is your name
 - My name is <bot name>
 
-+ (how old are you|how old are you)
++ [*] (old are you|age) [*]
 - I am <bot age> years old
   
++ i am # years old
+- A lot of people are <star> years old.
+
 + [*] (live|come from)
 - I'm from <bot location>
 
 
 // COVID-19
-+ (what is covid19|tell me about the virus|what is coronavirus|what is corona|i want to know about coronavirus|what is the virus)
-- Coronavirus disease (COVID-19) is an infectious disease caused by a new virus. \n
-^ The disease causes respiratory illness (like the flu) with symptoms such as a cough, \s
-^ fever, and in more severe cases, difficulty breathing. \n
-^ You can protect yourself by washing your hands frequently, avoiding touching your face,\s
-^ and avoiding close contact (1 meter or 3 feet) with people who are unwell.
++ (what is covid19|tell me about the virus|what is coronavirus|what is corona|i want to know about coronavirus|what is the virus|what is covid)
+- COVID-19 are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as 
+^ Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). \n <br>
+^ <br>
+^ In rare cases, they are what scientists call zoonotic, meaning they can be transmitted from animals to humans, according to the US Centers for Disease Control and Prevention. \n <br>
+^ <br>
+^ It is a dangerous diseases with incubation period between 4-6 days. \n
+^ It is fatal especially for those with weakened immune system, the elderly and the very young. \n
+^ It could also result in Pneumonia and bronchitis.
 
 
-+ (how does the virus spread|how does one get the virus|how does the virus spread)
+
++ [*] symptoms [*]
+- It depends on the virus, but common signs include respiratory symptoms, fever, cough, shortness of breath, and breathing difficulties. \n
+^ In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death
+
++ [*] novel [*]
+- A novel COVID-19 is a new strain of COVID-19 that has not been previously identified in humans. 
+
++ [*] humans become infected with covid19 of animal source
+- Detailed investigations found that SARS-CoV was transmitted from civet cats to humans in China in 2002 and MERS-CoV from dromedary camels to humans in Saudi Arabia in 2012. 
+^ Several known COVID-19 are circulating in animals that have not yet infected humans.  
+^ As surveillance improves around the world, more COVID-19 are likely to be identified.
+
++ [*] person to person [*]
+- Yes, some COVID-19 can be transmitted from person to person, usually after close contact with an infected patient, \s
+^ for example, in a household workplace, or health care centre.
+
++ [*] (the virus spread|get the virus|contract) [*]
 - Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze. \n
 ^ It also spreads when a person touches a surface or object that has the virus on it, \s
 ^ then touches their eyes, nose, or mouth.
 
 
-+ [*] (protect yourself from the virus|prevent the coronavirus|be safe)
-- You can protect yourself and prevent the spread the virus if you;
-^ <h3>Do</h3>
++ [*] (protect|protect myself from the virus|prevent|be safe) [*]
+- You can protect yourself and prevent the spread the virus if you; 
+^ <br> \n
+^ <strong>Do</strong>
 ^ <ol> \n
 ^ <li>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</li> \n
 ^ <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</li> \n
-^ <li>Avoid close contact (1 meter or 3 feet) with people who are unwell</li> \n
+^ <li>Avoid close contact (1 meter or 3 feet) with anyone showing symptoms of respiratory illness such coughing and sneezing </li> \n
+^ <li>Maintain safe food practices</li> \n
+^ <li>Disinfect the objects and surfaces you touch.</li> \n
 ^ <li>Stay home and self-isolate from others in the household if you feel unwell</li> \n \n
 ^ </ol> \n
-^ <h3>Don't</h3>
+^ <br>
+^ <strong>Don't</strong>
 ^ <ol> \n
 ^ <li>Touch your eyes, nose or face</li> \n
 ^ <li>Wash your hands for 2 seconds with soap or sanitizer</li> \n
 ^ </ol>
 
++ [*] health workers at risk [*]
+- Yes, they can be, as health care workers come into contact \s
+^ with patients more often than the general public WHO recommends that health care workers consistently apply appropriate infection prevention and control measures.
+
++ [*] entering the country [*]
+- Intense surveillance for suspected severe acute respiratory infections to be picked and tested for confirmation. \n
+^ Public Health preparedness plans have been prepared and ready to be activated in the event of a pandemic in line with the International Health Regulations (2005). \n
+^ Risk communication activities have been planned and aspects of it has started such as granting radio and TV interviews and port education on the virus.
 
 // the cure
-+ [*] (treatment for the virus|cure for the virus|drug for coronavirus|cure the virus)
++ [*] (cure|drug|cure|vaccine) [*]
  - There is currently no cure for COVID-19. There are however, many promising vaccine trials underway.
 
++ [*] treatment [*]
+- There is no specific treatment for disease caused by a COVID-19. \n
+^ However, many of the symptoms can be treated and therefore treatment based on the patient’s clinical condition. \n
+^ Moreover, supportive care for infected persons can be highly effective.
 
 // the test
-+ [*] test [*]
++ [*] (test|screen|check) [*]
 - You are most vulnerable if; \n
-^ <ol> \n
+^ <ul> \n
 ^ <li>You are sick or care for a sick person</li> \n
 ^ <li>You are above 60 years of age</li> \n
-^ <li>You have any of the following life-thretening symptoms: \n 
+^ <li>You have any of the following life-thretening symptoms; \n 
 ^ <ul> \n
 ^  <li>extreme difficulty in breathing</li> \n
 ^  <li>blue-colored lips or face</li> \n
@@ -187,12 +236,38 @@
 ^  <li>severe fever, cough and/ or sore throat</li> \n
   </ul>
 </li> \n
-^ </ol>
+^ </ul>
 
+// deaths or nots
++ [*] (confirmed cases|death|deaths|recoveries|recover|infected|stats|numbers|many) [*]
+- The following are the numbers in Ghana as of May 12, 2020; \n 
+^ <br> \n
+^ Confirmed cases: <strong>4,700</strong> <br>  \n
+^ Recoveries: <strong>494</strong> <br> \n
+^ Deaths: <strong>22</strong> <br>
+^ source: <a href="https://ghanahealthservice.org/covid19/" target="_blank">Ghana Health Service</a>
+^ <br> \n <br>
+^ Globally, the data looks like the following as of May 12, 2020;
+^ <br>
+^ Confirmed cases: <strong>4,058,252</strong> <br>
+^ Deaths: <strong>281,736</strong> <br>
+^ source: <a href="https://extranet.who.int/publicemergency" target="_blank">WHO Dashboard</a>
 
 // Get Help
-+ [*] (call|get help|talk to) [*]
-- You can call this number: +233 302 665651 for help
++ [*] (call|help|talk to|more information) [*]
+- You can call these numbers for help: \n
+^ <ul> \n
+^ <li>+233 302 665651</li> \n
+^ <li>+233 55 843 9868</li> \n
+^ <li>+233 50 949 7700</li> \n
+^ </ul>
+^ You can get more information the following organizations; \n
+^ <ul>
+^ <li><a href="https://www.moh.gov.gh/" target="_blank">Ministry of Health</a> </li> \n 
+^ <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen" target="_blank">World Health Organization</a> </li> \n
+^ <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/" target="_blank">Centres for Disease Control and Prevention</a> </li> \n
+^ <li><a href="http://moi.gov.gh/" target="_blank">Ministry of Information</a> \n
+^ </ul>
 
 
 + *
