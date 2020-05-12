@@ -12,6 +12,12 @@ body {
     background-color: aquamarine;
 }
 
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* .chat {
     width: 400px;
     height: 90%;
